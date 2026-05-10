@@ -5,21 +5,21 @@
 class Krait < Formula
   desc "Unified codebase health analyzer for Go"
   homepage "https://github.com/krait-go/krait"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/krait-go/krait/releases/download/v0.1.1/krait_darwin_amd64.tar.gz"
-      sha256 "eb49c18e9694e2acbf03d72bb53c4330932fc83c9edd3d29da2c1e85e5fc390a"
+      url "https://github.com/krait-go/krait/releases/download/v0.2.0/krait_darwin_amd64.tar.gz"
+      sha256 "d9b41d0a846cdce45964dcb9cb91fea32db576b231085b17cdafee46f6630959"
 
       define_method(:install) do
         bin.install "krait"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/krait-go/krait/releases/download/v0.1.1/krait_darwin_arm64.tar.gz"
-      sha256 "cdcfa75c0512e82b28715295b2c7cfd11492024d8ab92815e1ce0e523fd63d3e"
+      url "https://github.com/krait-go/krait/releases/download/v0.2.0/krait_darwin_arm64.tar.gz"
+      sha256 "76fbae473e62728c458922b2bd087ac8f3daa3011ed1708bd04061cfd2c8e0a1"
 
       define_method(:install) do
         bin.install "krait"
@@ -29,15 +29,15 @@ class Krait < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krait-go/krait/releases/download/v0.1.1/krait_linux_amd64.tar.gz"
-      sha256 "722e1283fe5ad134384f3229abbe50e8c44b15109103f9c6f8ea00b807ac0865"
+      url "https://github.com/krait-go/krait/releases/download/v0.2.0/krait_linux_amd64.tar.gz"
+      sha256 "647618dc7d5436f665b610c595adc9a935c22a7d4ebc95a6668c7dd1a64a0cb5"
       define_method(:install) do
         bin.install "krait"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krait-go/krait/releases/download/v0.1.1/krait_linux_arm64.tar.gz"
-      sha256 "f4a032f2000d4d8f6764e8329a135b11c3de48cb661d6c94a6db9f3750b90955"
+      url "https://github.com/krait-go/krait/releases/download/v0.2.0/krait_linux_arm64.tar.gz"
+      sha256 "f79a8cd6ca27990c2144b11610a948c0639592f0a3328bdef5f46e4fa51df8c4"
       define_method(:install) do
         bin.install "krait"
       end
